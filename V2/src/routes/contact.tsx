@@ -34,18 +34,20 @@ function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="mx-auto grid max-w-6xl gap-16 px-6 pb-24 pt-14 lg:grid-cols-[1fr_1.1fr]">
+    <section className="mx-auto grid max-w-6xl gap-16 bg-primary px-6 pb-24 pt-14 text-primary-foreground lg:grid-cols-[1fr_1.1fr]">
       <div>
-        <p className="eyebrow">Contact</p>
+        <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+          Contact
+        </p>
         <h1 className="mt-5 text-4xl leading-[1.1] sm:text-5xl">Let's build something with craft in it.</h1>
-        <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-md text-lg leading-relaxed text-primary-foreground/80">
           Whether you run a school, a development, a hotel group, or a workshop of your
           own — tell us where you fit and we'll come back with a concrete first step.
         </p>
       </div>
 
       {submitted ? (
-        <div className="self-start rounded-sm border border-border bg-card p-8">
+        <div className="self-start rounded-sm border border-border bg-card p-8 text-foreground">
           <h2 className="text-2xl">Thank you.</h2>
           <p className="mt-3 text-base leading-relaxed text-muted-foreground">
             Your message has been noted. We'll be in touch shortly.
@@ -60,24 +62,30 @@ function ContactPage() {
           }}
         >
           <div>
-            <label htmlFor="name" className="eyebrow block">
+            <label
+              htmlFor="name"
+              className="eyebrow block"
+              style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}
+            >
               Name / Organisation
             </label>
             <input
               id="name"
               name="name"
               required
-              className="mt-3 w-full rounded-sm border border-input bg-card px-4 py-3 text-base outline-none focus:border-ring"
+              className="mt-3 w-full rounded-sm border border-input bg-card px-4 py-3 text-base text-foreground outline-none focus:border-ring"
             />
           </div>
 
           <fieldset>
-            <legend className="eyebrow">I'm interested in</legend>
+            <legend className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+              I'm interested in
+            </legend>
             <div className="mt-3 flex flex-wrap gap-3">
               {interests.map((interest) => (
                 <label
                   key={interest}
-                  className="cursor-pointer rounded-sm border border-border bg-card px-4 py-2 text-sm has-[:checked]:border-primary has-[:checked]:bg-secondary"
+                  className="cursor-pointer rounded-sm border border-border bg-card px-4 py-2 text-sm text-foreground has-[:checked]:border-primary has-[:checked]:bg-secondary"
                 >
                   <input type="radio" name="interest" value={interest} className="sr-only" required />
                   {interest}
@@ -87,7 +95,11 @@ function ContactPage() {
           </fieldset>
 
           <div>
-            <label htmlFor="message" className="eyebrow block">
+            <label
+              htmlFor="message"
+              className="eyebrow block"
+              style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}
+            >
               Message
             </label>
             <textarea
@@ -95,18 +107,18 @@ function ContactPage() {
               name="message"
               rows={5}
               required
-              className="mt-3 w-full rounded-sm border border-input bg-card px-4 py-3 text-base outline-none focus:border-ring"
+              className="mt-3 w-full rounded-sm border border-input bg-card px-4 py-3 text-base text-foreground outline-none focus:border-ring"
             />
           </div>
 
           <button
             type="submit"
-            className="rounded-sm bg-primary px-7 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-clay"
+            className="rounded-sm bg-accent px-7 py-3.5 text-sm font-medium tracking-wide text-accent-foreground transition-colors hover:opacity-90"
           >
             Send message
           </button>
 
-          <p className="text-xs leading-relaxed text-muted-foreground">
+          <p className="text-xs leading-relaxed text-primary-foreground/70">
             Contact email, phone and address will be published here once confirmed.
           </p>
         </form>

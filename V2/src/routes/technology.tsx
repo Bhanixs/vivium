@@ -48,19 +48,21 @@ const commerce = [
 
 function TechnologyPage() {
   return (
-    <>
+    <div className="bg-primary text-primary-foreground">
       <section className="mx-auto max-w-6xl px-6 pb-16 pt-14">
-        <p className="eyebrow">Technology / Our platform</p>
+        <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+          Technology / Our platform
+        </p>
         <h1 className="mt-5 max-w-4xl text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">
           Two missions, one platform.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
           This is the layer that makes the four verticals possible to run at scale — not a
           separate product.
         </p>
       </section>
 
-      <section className="border-t border-border bg-card">
+      <section className="border-t border-border bg-card text-foreground">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <p className="eyebrow">Mission 01</p>
           <h2 className="mt-4 max-w-3xl text-3xl leading-snug lg:text-4xl">
@@ -85,21 +87,23 @@ function TechnologyPage() {
         </div>
       </section>
 
-      <section className="border-t border-border">
+      <section className="border-t border-primary-foreground/15">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="eyebrow">Mission 02</p>
+          <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+            Mission 02
+          </p>
           <h2 className="mt-4 max-w-3xl text-3xl leading-snug lg:text-4xl">
             A commerce platform
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/80">
             The transactional backbone connecting every vertical — one system powering B2B
             procurement for schools, construction, and hospitality partners, and direct
             B2C retail for individual customers.
           </p>
 
-          <ul className="mt-10 divide-y divide-border border-y border-border">
+          <ul className="mt-10 divide-y divide-primary-foreground/15 border-y border-primary-foreground/15">
             {commerce.map((item) => (
-              <li key={item} className="py-6 text-base leading-relaxed text-muted-foreground">
+              <li key={item} className="py-6 text-base leading-relaxed text-primary-foreground/80">
                 {item}
               </li>
             ))}
@@ -125,6 +129,6 @@ function TechnologyPage() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

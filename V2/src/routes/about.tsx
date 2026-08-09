@@ -25,9 +25,11 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <>
+    <div className="bg-primary text-primary-foreground">
       <section className="mx-auto max-w-6xl px-6 pb-16 pt-14">
-        <p className="eyebrow">About Vivium</p>
+        <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+          About Vivium
+        </p>
         <h1 className="mt-5 max-w-4xl text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">
           Artisans at the centre of the modern economy — not as a footnote.
         </h1>
@@ -51,7 +53,7 @@ function AboutPage() {
           customers — on one platform, and we're building toward physical
           skill-development and commerce hubs in every district of India.
         </p>
-        <p className="mt-7 text-lg leading-relaxed text-muted-foreground">
+        <p className="mt-7 text-lg leading-relaxed text-primary-foreground/80">
           Today, that mission shows up in four concrete verticals: workshops that bring
           craft into schools, product lines for construction and hospitality spaces, and a
           direct retail line that puts authentic, maker-attributed products straight into
@@ -64,18 +66,18 @@ function AboutPage() {
         <div className="mt-12 flex flex-wrap gap-4">
           <Link
             to="/technology"
-            className="rounded-sm bg-primary px-7 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-clay"
+            className="rounded-sm bg-accent px-7 py-3.5 text-sm font-medium tracking-wide text-accent-foreground transition-colors hover:opacity-90"
           >
             See the platform
           </Link>
           <Link
             to="/contact"
-            className="rounded-sm border border-border px-7 py-3.5 text-sm font-medium tracking-wide transition-colors hover:bg-secondary"
+            className="rounded-sm border border-primary-foreground/40 px-7 py-3.5 text-sm font-medium tracking-wide transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10"
           >
             Partner with us
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }

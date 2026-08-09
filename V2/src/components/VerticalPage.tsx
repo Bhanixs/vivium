@@ -31,12 +31,14 @@ export function VerticalPage({
   children,
 }: VerticalPageProps) {
   return (
-    <>
+    <div className="bg-primary text-primary-foreground">
       <section className="mx-auto grid max-w-6xl items-end gap-12 px-6 pb-16 pt-14 lg:grid-cols-[1fr_1fr] lg:pb-24">
         <div>
-          <p className="eyebrow">{eyebrow}</p>
+          <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+            {eyebrow}
+          </p>
           <h1 className="mt-5 text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">{headline}</h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{intro}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/80">{intro}</p>
         </div>
         <img
           src={image}
@@ -48,7 +50,7 @@ export function VerticalPage({
         />
       </section>
 
-      <section className="border-t border-border bg-card">
+      <section className="border-t border-border bg-card text-foreground">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <p className="eyebrow">{offerTitle}</p>
           <div className="mt-10 divide-y divide-border border-y border-border">
@@ -87,6 +89,6 @@ export function VerticalPage({
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
