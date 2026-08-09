@@ -32,3 +32,6 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Brand assets not meant for the repo
+/public/idm brand book.pdf
