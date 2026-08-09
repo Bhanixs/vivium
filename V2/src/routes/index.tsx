@@ -52,16 +52,18 @@ const verticals = [
 
 function Home() {
   return (
-    <>
+    <div className="bg-primary text-primary-foreground">
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-12 lg:grid-cols-[1.05fr_1fr] lg:pb-32">
         <div>
-          <p className="eyebrow">Four verticals · Two technology missions</p>
+          <p className="eyebrow" style={{ color: "var(--color-primary-foreground)", opacity: 0.7 }}>
+            Four verticals · Two technology missions
+          </p>
           <h1 className="mt-6 text-5xl leading-[1.05] sm:text-6xl lg:text-7xl">
             India's Craft,
             <br />
-            <em className="text-clay">Everywhere It Belongs.</em>
+            <em className="text-accent">Everywhere It Belongs.</em>
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-primary-foreground/80">
             Vivium connects artisans, designers, and brands to the places craft actually
             gets used — schools, buildings, hospitality spaces, and homes — through a
             technology platform built to grow with every layer of that ecosystem.
@@ -69,13 +71,13 @@ function Home() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#verticals"
-              className="rounded-sm bg-primary px-7 py-3.5 text-sm font-medium tracking-wide text-primary-foreground transition-colors hover:bg-clay"
+              className="rounded-sm bg-accent px-7 py-3.5 text-sm font-medium tracking-wide text-accent-foreground transition-colors hover:opacity-90"
             >
               Explore Our Verticals
             </a>
             <Link
               to="/contact"
-              className="rounded-sm border border-border px-7 py-3.5 text-sm font-medium tracking-wide transition-colors hover:bg-secondary"
+              className="rounded-sm border border-primary-foreground/40 px-7 py-3.5 text-sm font-medium tracking-wide transition-colors hover:border-primary-foreground hover:bg-primary-foreground/10"
             >
               Partner With Us
             </Link>
@@ -94,7 +96,7 @@ function Home() {
         </figure>
       </section>
 
-      <section id="verticals" className="border-t border-border bg-card">
+      <section id="verticals" className="border-t border-border bg-card text-foreground">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
           <p className="eyebrow">What we do</p>
           <h2 className="mt-4 max-w-2xl text-4xl leading-tight lg:text-5xl">
@@ -139,6 +141,6 @@ function Home() {
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 }
